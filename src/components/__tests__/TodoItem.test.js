@@ -1,19 +1,18 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
 import TodoItem from '../TodoItem'
 
 describe('TodoItem', () => {
   it('matches its snapshot - not complete', () => {
     const component = shallow(<TodoItem text="Not complete" />)
 
-    expect(toJson(component)).toMatchSnapshot()
+    expect(component).toMatchSnapshot()
   })
 
   it('matches its snapshot - complete', () => {
     const component = shallow(<TodoItem text="complete" complete />)
 
-    expect(toJson(component)).toMatchSnapshot()
+    expect(component).toMatchSnapshot()
   })
 
   it('renders correct structure', () => {
