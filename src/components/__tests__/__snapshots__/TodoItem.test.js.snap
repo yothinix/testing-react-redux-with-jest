@@ -11,13 +11,13 @@ ShallowWrapper {
   "node": <li
     className="complete"
 >
-    complete
+    Drink Coffee
 </li>,
   "nodes": Array [
     <li
       className="complete"
 >
-      complete
+      Drink Coffee
 </li>,
   ],
   "options": Object {},
@@ -28,7 +28,7 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <TodoItem
         complete={true}
-        text="complete"
+        text="Drink Coffee"
 />,
       "_debugID": 3,
       "_hostContainerInfo": null,
@@ -38,7 +38,7 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "complete": true,
-          "text": "complete",
+          "text": "Drink Coffee",
         },
         "refs": Object {},
         "state": null,
@@ -63,13 +63,13 @@ ShallowWrapper {
         "_currentElement": <li
           className="complete"
 >
-          complete
+          Drink Coffee
 </li>,
         "_debugID": 4,
         "_renderedOutput": <li
           className="complete"
 >
-          complete
+          Drink Coffee
 </li>,
       },
       "_renderedNodeType": 0,
@@ -84,7 +84,7 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <TodoItem
     complete={true}
-    text="complete"
+    text="Drink Coffee"
 />,
 }
 `;
@@ -100,13 +100,13 @@ ShallowWrapper {
   "node": <li
     className=""
 >
-    Not complete
+    Drink Coffee
 </li>,
   "nodes": Array [
     <li
       className=""
 >
-      Not complete
+      Drink Coffee
 </li>,
   ],
   "options": Object {},
@@ -117,7 +117,7 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <TodoItem
         complete={false}
-        text="Not complete"
+        text="Drink Coffee"
 />,
       "_debugID": 1,
       "_hostContainerInfo": null,
@@ -127,7 +127,7 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "complete": false,
-          "text": "Not complete",
+          "text": "Drink Coffee",
         },
         "refs": Object {},
         "state": null,
@@ -152,13 +152,13 @@ ShallowWrapper {
         "_currentElement": <li
           className=""
 >
-          Not complete
+          Drink Coffee
 </li>,
         "_debugID": 2,
         "_renderedOutput": <li
           className=""
 >
-          Not complete
+          Drink Coffee
 </li>,
       },
       "_renderedNodeType": 0,
@@ -173,7 +173,7 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <TodoItem
     complete={false}
-    text="Not complete"
+    text="Drink Coffee"
 />,
 }
 `;

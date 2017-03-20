@@ -3,30 +3,28 @@ import { shallow } from 'enzyme'
 import TodoItem from '../TodoItem'
 
 describe('TodoItem', () => {
-  it('matches its snapshot - not complete', () => {
-    const component = shallow(<TodoItem text="Not complete" />)
+  let component
 
+  beforeEach(() => {
+    component = shallow(<TodoItem text="Drink Coffee" />)
+  })
+
+  it('matches its snapshot - not complete', () => {
     expect(component).toMatchSnapshot()
   })
 
   it('matches its snapshot - complete', () => {
-    const component = shallow(<TodoItem text="complete" complete />)
-
+    component.setProps({ complete: true })
     expect(component).toMatchSnapshot()
   })
 
   it('renders correct structure', () => {
-    const component = shallow(<TodoItem text="Hello" />)
-
     expect(component.is('li')).toBe(true)
-    expect(component.text()).toBe('Hello')
+    expect(component.text()).toBe('Drink Coffee')
   })
 
   it('has complete class if receiving complete prop', () => {
-    const component = shallow(
-      <TodoItem text="Hello" complete />
-    )
-
+    component.setProps({ complete: true })
     expect(component.hasClass('complete')).toBe(true)
   })
 })
