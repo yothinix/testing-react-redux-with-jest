@@ -7,6 +7,7 @@ describe('NewTodo', () => {
   let props
 
   beforeEach(() => {
+    props = { addTodo: jest.fn() }
     component = shallow(<NewTodo />)
   })
 
@@ -17,5 +18,19 @@ describe('NewTodo', () => {
     expect(component.find('button').length).toBe(1)
     expect(component.find('button').hasClass('btn')).toBe(true)
     expect(component.find('button').hasClass('btn-primary')).toBe(true)
+  })
+
+  it('changes state when typing', () => {
+    component.find('input').simulate('change', {
+      target: {
+        value: 'Hello',
+      },
+    })
+  })
+
+  it('calls props.addTodo when clicking Add button', () => {
+    component.setState({ text: 'Hello' })
+    component.find('button').simulate('click')
+    expect(props.addTodo).toHaveBeenCalledWith('Hello')
   })
 })
