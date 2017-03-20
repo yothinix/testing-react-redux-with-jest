@@ -1,21 +1,18 @@
-import React from 'react'
-import { selectTodos } from '../selectors/todosSelector'
+import { selectTodos } from '../todosSelector'
 
-
-describe('TodoList Container', () => {
-  it('performs mapStateToProps correctly', () => {
+describe('todosSelector', () => {
+  it('selects all todos', () => {
     const state = {
       todos: [
         { id: 1, text: 'Feed cat', complete: false },
         { id: 2, text: 'Drink coffee', complete: true },
       ],
     }
-    const expectedProps = {
+    expect(selectTodos(state).toEqual({
       todos: [
         { id: 1, text: 'Feed cat', complete: false },
         { id: 2, text: 'Drink coffee', complete: true },
       ],
-    }
-    expect(selectTodos(state)).toEqual(expectedProps)
+    })
   })
 })
