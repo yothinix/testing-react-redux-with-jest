@@ -8,7 +8,7 @@ describe('NewTodo', () => {
 
   beforeEach(() => {
     props = { addTodo: jest.fn() }
-    component = shallow(<NewTodo />)
+    component = shallow(<NewTodo {...props} />)
   })
 
   it('renders correct structure', () => {
@@ -28,7 +28,7 @@ describe('NewTodo', () => {
     })
   })
 
-  xit('calls props.addTodo when clicking Add button', () => {
+  it('calls props.addTodo when clicking Add button', () => {
     component.setState({ text: 'Hello' })
     component.find('button').simulate('click')
     expect(props.addTodo).toHaveBeenCalledWith('Hello')

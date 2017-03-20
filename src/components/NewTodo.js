@@ -29,4 +29,8 @@ class NewTodo extends Component {
   }
 }
 
+NewTodo.propTypes = {
+  addTodo: React.PropTypes.func.isRequired,
+}
+
 export default NewTodo
