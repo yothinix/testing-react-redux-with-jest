@@ -1,5 +1,5 @@
 {
   "moduleNameMapper": {
-    "\\.css$": "<rootDir>/__mocks__/styleMock.js"
+    "\\.css$": "identity-obj-proxy"
   }
 }
