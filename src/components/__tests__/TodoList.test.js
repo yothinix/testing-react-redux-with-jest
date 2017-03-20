@@ -13,6 +13,7 @@ describe('TodoList', () => {
       { id: 2, text: 'Drink coffee', complete: true },
       ],
     }
+    component = shallow(<TodoList {...props} />)
   })
 
   it('matches its snapshot', () => {
