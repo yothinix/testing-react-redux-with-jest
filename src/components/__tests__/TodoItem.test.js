@@ -10,6 +10,12 @@ describe('TodoItem', () => {
     expect(toJson(component)).toMatchSnapshot()
   })
 
+  it('matches its snapshot - complete', () => {
+    const component = shallow(<TodoItem text="complete" complete />)
+
+    expect(toJson(component)).toMatchSnapshot()
+  })
+
   it('renders correct structure', () => {
     const component = shallow(<TodoItem text="Hello" />)
 
